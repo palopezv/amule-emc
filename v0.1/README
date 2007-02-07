@@ -1,0 +1,21 @@
+amule-emc v0.2 alpha 1 (20070130)
+
+2006-2007 Johannes Krampf <wuischke@amule.org>
+
+This is free software under the GPL. See license.txt for license information.
+
+See 'INSTALL' file for installation information.
+
+This is the first development release of amule-emc, an emulecollection support
+programm for aMule.
+Current version uses the ed2k link handler for aMule to add the links to
+aMule. Please make sure the ed2k binary is properly installed.
+
+Usage: amule-emc emulecollection file
+
+
+Possible problems: The support for filesizes bigger than 4GB seems to be bugged,
+this is currently being researched.
+
+Please report any other problems or successful usage on non-Linux platforms
+to me.
