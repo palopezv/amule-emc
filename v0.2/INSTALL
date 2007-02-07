@@ -1,0 +1,11 @@
+PREREQUISITES
+You'll need a sane build environment including g++ compiler and the wxWidgets
+libraries and development files.
+
+
+COMPILATION
+Execute the 'compile' script to compile amule-emc.
+
+INSTALLATION
+Copy the amule-emc executable to /usr/bin or /usr/local/bin
+(you'll need to be root).

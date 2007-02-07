@@ -1,0 +1,27 @@
+#!/bin/bash
+
+AMULE_SRC="./amule-cvs/"
+LIBS="-lreadline emc-NetworkFunctions.o emc-ECSocket.o emc-ECMuleSocket.o emc-md4.o emc-ed2khash.o emc-OtherFunctions.o emc-ECTag.o emc-Tag.o emc-ECPacket.o emc-MD5Sum.o emc-Format.o emc-ExternalConnector.o emc-CryptoPP.o emc-UInt128.o emc-Logger.o emc-SafeFile.o emc-StringFunctions.o emc-FileFunctions.o emc-CFile.o emc-RemoteConnect.o"
+
+#g++ ${AMULE_SRC}src/CFile.cpp -w -I. -I${AMULE_SRC}src/extern -I${AMULE_SRC}src/libs -I${AMULE_SRC}src `wx-config --cxxflags` -c -o emc-CFile.o
+#g++ ${AMULE_SRC}src/SafeFile.cpp -w -I. -I${AMULE_SRC}src/libs -I${AMULE_SRC}src `wx-config --cxxflags` -c -o emc-SafeFile.o
+#g++ ${AMULE_SRC}src/FileFunctions.cpp -w -I. -I${AMULE_SRC}src/extern -I${AMULE_SRC}src/libs -I${AMULE_SRC}src `wx-config --cxxflags` -c -o emc-FileFunctions.o
+#g++ ${AMULE_SRC}src/libs/common/StringFunctions.cpp -w -I. -I${AMULE_SRC}src/extern -I${AMULE_SRC}src/libs -I${AMULE_SRC}src `wx-config --cxxflags` -c -o emc-StringFunctions.o
+#g++ ${AMULE_SRC}src/Tag.cpp -w -I. -I${AMULE_SRC}src/libs -I${AMULE_SRC}src `wx-config --cxxflags` -c -o emc-Tag.o
+#g++ ${AMULE_SRC}src/Logger.cpp -w -I. -I${AMULE_SRC}src/libs -I${AMULE_SRC}src `wx-config --cxxflags` -c -o emc-Logger.o
+#g++ ${AMULE_SRC}src/kademlia/utils/UInt128.cpp -w -I. -I${AMULE_SRC}src/libs -I${AMULE_SRC}src `wx-config --cxxflags` -DUSE_EMBEDDED_CRYPTO -c -o emc-UInt128.o
+#g++ ${AMULE_SRC}src/extern/cryptopp/CryptoPP.cpp -w -I. -I${AMULE_SRC}src/libs -I${AMULE_SRC}src `wx-config --cxxflags` -c -o emc-CryptoPP.o
+#g++ ${AMULE_SRC}src/ExternalConnector.cpp -w -I. -I${AMULE_SRC} -I${AMULE_SRC}src/extern -I${AMULE_SRC}src/libs -I${AMULE_SRC}src `wx-config --cxxflags`  -DUSE_WX_EXTENSIONS -DHAVE_CONFIG_H -c -o emc-ExternalConnector.o
+#g++ ${AMULE_SRC}src/libs/common/Format.cpp -w -I. -I${AMULE_SRC}src/extern -I${AMULE_SRC}src/libs -I${AMULE_SRC}src `wx-config --cxxflags` -c -o emc-Format.o
+#g++ ${AMULE_SRC}src/libs/common/MD5Sum.cpp -w -I. -I${AMULE_SRC}src/extern -I${AMULE_SRC}src/libs -I${AMULE_SRC}src `wx-config --cxxflags` -c -o emc-MD5Sum.o
+#g++ ${AMULE_SRC}src/libs/ec/cpp/RemoteConnect.cpp -w -I. -I${AMULE_SRC}src/extern -I${AMULE_SRC}src/libs -I${AMULE_SRC}src `wx-config --cxxflags` -DUSE_WX_EXTENSIONS -c -o emc-RemoteConnect.o
+#g++ ${AMULE_SRC}src/libs/ec/cpp/ECPacket.cpp  -w -I. -I${AMULE_SRC}src/extern -I${AMULE_SRC}src/libs -I${AMULE_SRC}src `wx-config --cxxflags` -c -o emc-ECPacket.o
+#g++ ${AMULE_SRC}src/libs/ec/cpp/ECMuleSocket.cpp -w -I. -I${AMULE_SRC}src/extern -I${AMULE_SRC}src/libs -I${AMULE_SRC}src `wx-config --cxxflags` -c -o emc-ECMuleSocket.o
+#g++ ${AMULE_SRC}src/libs/ec/cpp/ECSocket.cpp -w -I. -I${AMULE_SRC}src/extern -I${AMULE_SRC}src/libs -I${AMULE_SRC}src `wx-config --cxxflags` -c -o emc-ECSocket.o
+#g++ ${AMULE_SRC}src/libs/ec/cpp/ECTag.cpp -w -I. -I${AMULE_SRC}src/extern -I${AMULE_SRC}src/libs -I${AMULE_SRC}src `wx-config --cxxflags` -DUSE_WX_EXTENSIONS -c -o emc-ECTag.o
+g++ ${AMULE_SRC}src/OtherFunctions.cpp -w -I. -I${AMULE_SRC} -I${AMULE_SRC}src/extern -I${AMULE_SRC}src/libs -I${AMULE_SRC}src `wx-config --cxxflags` -DUSE_WX_EXTENSIONS -DHAVE_CONFIG_H -DAMULE_LOCALEDIR="\"dirtyhack\"" -DAMULE_INSTALL_PREFIX="\"dirtyhack\"" -c -o emc-OtherFunctions.o
+#g++ ${AMULE_SRC}src/NetworkFunctions.cpp -w -I. -I${AMULE_SRC} -I${AMULE_SRC}src/extern -I${AMULE_SRC}src/libs -I${AMULE_SRC}src `wx-config --cxxflags` -DUSE_WX_EXTENSIONS -DHAVE_CONFIG_H -c -o emc-NetworkFunctions.o
+#g++ ${AMULE_SRC}src/utils/aLinkCreator/src/ed2khash.cpp -w -I. -I${AMULE_SRC} -I${AMULE_SRC}src/extern -I${AMULE_SRC}src/libs -I${AMULE_SRC}src `wx-config --cxxflags` -c -o emc-ed2khash.o
+#g++ ${AMULE_SRC}src/utils/aLinkCreator/src/md4.cpp -w -I. -I${AMULE_SRC} -I${AMULE_SRC}src/extern -I${AMULE_SRC}src/libs -I${AMULE_SRC}src `wx-config --cxxflags` -c -o emc-md4.o
+
+g++ -w emc.cpp -I. -I${AMULE_SRC}src/libs -I${AMULE_SRC}src ${LIBS} `wx-config --cxxflags` `wx-config --libs` -DUSE_WX_EXTENSIONS -o amule-emc && ./amule-emc

@@ -1,0 +1,79 @@
+amule-emc 0.1, aMule emulecollection support
+
+(c) 2006 Johannes Krampf <wuischke@amule.org>
+
+THIS VERSION IS UNSTABLE. PLEASE HELP BY
+REPORTING PROBLEMS OR MAKING SUGGESTIONS.
+
+Table Of Contents
+
+1. Compilation and Installation
+ 1.1 Requirements
+ 1.2 The compile script
+ 1.3 Installation
+2. Usage
+ 2.1 Buttons
+ 2.2 Options
+3. Known problems / ToDo
+4. License information
+5. Help / Suggestions
+
+1. Compilation and Installation
+
+1.1 Requirements
+ - wxwidgets and crypto++ development files
+ - aMule CVS source (you have to run the configure
+   script at least once to create config.h)
+
+1.2 The compile script
+ Open the script 'compile' with a text
+ editor and point the AMULE_SRC variable to the
+ aMule CVS source folder. (e.g. '/opt/amule-cvs/')
+ Now you can execute the compile script. The script
+ will create all necessary files and run the binary
+ to test its functionality.
+
+1.3 Installation
+ Copy the amule-emc binary /usr/bin, /usr/local/bin or
+ where ever you want to keep it.
+ e.g.: 'sudo cp amule-emc /usr/local/bin'
+
+2. Usage
+
+2.1 Buttons
+ Open: Open an emulecollection file
+  Key verification is currently not supported
+ Download: Submit all files in the list to aMule(d)
+ Options: Open the options dialog. See 2.2 Options
+ About: Display the about dialog
+ Close: Closes the application
+ Add Link: Use an ed2k link to add a file to the list
+ Add File: Hash a local file and add it to the list
+ Delete: Delete the selected list items
+
+2.2 Options
+ EC (External Connections) settings:
+  host: host running aMule(d). Default: localhost
+  port: port listening for EC. Default: 4712
+  login: Currently unused. Default: amule
+  password: password for EC. Default: password
+
+3. Known problems / ToDo
+ - Password is stored as clear text in ~/.amule-emc
+   or registry on win
+ - Key verification is currently not supported. 
+   Author name will be displayed though.
+ - Weird coding style
+ - Missing save option for emulecollection files
+ - Missing save options in option dialog
+ - GUI needs redesign
+
+4. License information
+ - All code is GPL licensed. See license.txt file
+   for further informations.
+ - amule.xpm by Treviño at amule forums.
+
+5. Help / Suggestions
+ Please mail me at <wuischke@amule.org> or contact
+ me at the amule forums should you need help or have
+ suggestions. Thank you!
