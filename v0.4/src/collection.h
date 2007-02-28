@@ -25,12 +25,12 @@ class collection {
 		~collection();
 		
 		bool		Open( std::string File );
-		int		GetFileCount( int index );
-
-		std::string	GetEd2kLink( int index );
-		std::string	GetFileName( int index );
-		uint64_t	GetFileSize( int index );
-		std::string	GetFileHash( int index );
+		size_t		GetFileCount();
+								// Return values on error:
+		std::string	GetEd2kLink( int index );	// "Invalid Index"
+		std::string	GetFileName( int index );	// "Empty String", "Invalid Index"
+		uint64_t	GetFileSize( int index );	// 0
+		std::string	GetFileHash( int index );	// "Empty String", "Invalid Index"
 	private:
 		bool		OpenBinary( std::string File );
 		bool		OpenText( std::string File );
@@ -38,8 +38,10 @@ class collection {
 		bool		AddLink( std::string Link );
 		bool		AddFile( std::string	FileName,
 					 uint64_t	FileSize,
-				 	std::string	FileHash
+				 	 std::string	FileHash
 				);
+		
+		bool		IsValidHash( std::string FileHash );
 				 		
 		typedef struct{
 			std::string	FileName;
@@ -48,5 +50,5 @@ class collection {
 		} CollectionFile;
 		
 		std::vector<CollectionFile> vCollection;
-		
+			
 };

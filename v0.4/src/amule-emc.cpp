@@ -19,8 +19,11 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 #include "collection.h"
 
 #include <string>
+#include <iostream>
 
 int main() {
 	collection my_collection;
+	std::cout << "GetFileCount: " << my_collection.GetFileCount() << std::endl;
+	std::cout << "GetEd2kLink(0): " << my_collection.GetEd2kLink(0) << std::endl;
 	return 0;
 }
