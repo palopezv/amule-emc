@@ -16,14 +16,31 @@ along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 */
 
+#include "amule-emc.h"
 #include "collection.h"
 
 #include <string>
 #include <iostream>
 
-int main() {
-	collection my_collection;
-	std::cout << "GetFileCount: " << my_collection.GetFileCount() << std::endl;
-	std::cout << "GetEd2kLink(0): " << my_collection.GetEd2kLink(0) << std::endl;
+int main(int argc, char *argv[])
+{
+	int i;
+
+	for (i = 0; i < argc; i++)
+	{
+		OutputEd2kLinks(argv[i]);
+	}
 	return 0;
+}
+
+size_t	OutputEd2kLinks( std::string File )
+{
+	collection my_collection;
+	if (my_collection.Open( File ))
+	{
+		for(int i = 0;i < my_collection.GetFileCount();i++)
+			std::cout	<< my_collection.GetEd2kLink(i)
+					<< std::endl;
+	}
+	return my_collection.GetFileCount();
 }

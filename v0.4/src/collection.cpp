@@ -21,6 +21,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 #include <vector>
 #include <string>
 #include <sstream>
+#include <fstream>
 
 collection::collection()
 {
@@ -93,12 +94,29 @@ std::string	collection::GetFileHash( int index )
 
 bool	collection::OpenBinary( std::string File )
 {
-	return 0;
+	return false;
 };
 
 bool	collection::OpenText( std::string File )
 {
-	return 0;
+	int		numLinks = 0;
+	std::string	line;
+	std::ifstream infile;
+	
+	infile.open(File.c_str(), std::ifstream::in);
+		if(!infile)
+			return false;
+  	
+  	while (getline(infile, line))
+		if(AddLink(line))
+			numLinks++;
+	
+	infile.close();
+	
+	if(numLinks == 0)
+		return false;
+		
+	return true;
 };
 
 bool	collection::AddLink( std::string Link )
