@@ -96,10 +96,6 @@ std::string	collection::GetFileHash( int index )
 
 bool	collection::OpenBinary( std::string File )
 {
-#warning function OpenBinary( std::string File ) is not finished
-	//return false;
-	
-	
 	std::ifstream infile;
 	
 	infile.open(File.c_str(), std::ifstream::in|std::ifstream::binary);
