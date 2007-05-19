@@ -41,6 +41,7 @@ Lines contain either an ed2k link or a comment starting with #.
   
   	at this point the TAGTYPE 0x01 will appear as 0x81 (uType | 0x80)
   	-> see eMule packets.cpp
+  	FT_FILERATING and FT_FILECOMMENT are optional tags
    	
    	TAGTYPE_HASH					0x01
   		FT_FILEHASH					0x28
@@ -54,7 +55,7 @@ Lines contain either an ed2k link or a comment starting with #.
   		uint16_t					file size
   	TAGTYPE_UINT8					0x09
   		FT_FILESIZE					0x02
-  		uint8_t					file size
+  		uint8_t						file size
   	TAGTYPE_UINT64					0x0B
   		FT_FILESIZE					0x02
   		uint64_t					file size
@@ -69,5 +70,14 @@ Lines contain either an ed2k link or a comment starting with #.
   		FT_FILENAME					0x01
   		uint16_t					string length
   		std::string					string value  	  	
+  
+  	TAGTYPE_STRING					0x02
+  		FT_FILECOMMENT					0xF6
+  		uint16_t					string length
+  		std::string					string value  	  	
+  
+  	TAGTYPE_UINT8					0x09
+  		FT_FILERATING					0xF7
+  		uint8_t						file rating 	
   
   (notype) signature (only for signed files)
