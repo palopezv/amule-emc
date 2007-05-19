@@ -9,7 +9,7 @@ Lines contain either an ed2k link or a comment starting with #.
 {{{
 uint32_t emulecollection version
 values:	COLLECTION_FILE_VERSION1_INITIAL		0x01
-		COLLECTION_FILE_VERSION2_LARGEFILES		0x02
+	COLLECTION_FILE_VERSION2_LARGEFILES		0x02
 	
 	version 2 files support files bigger than 4GB (uint64_t file sizes)
 
