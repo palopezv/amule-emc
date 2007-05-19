@@ -1,7 +1,3 @@
-== What is an emulecollection? ==
-
-An emulecollection is a file which contains various (hence a collection of) ed2k links. This is usually used to group various related files, e.g. a series.
-
 == emulecollection file structure ==
 
 === text files ===
