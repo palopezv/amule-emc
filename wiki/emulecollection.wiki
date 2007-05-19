@@ -28,7 +28,8 @@ header tags:
 		uint16_t					string length
 		std::string					string value
 	TAGTYPE_BLOB					0x07
-		uint16_t					0x0001  	  				FT_COLLECTIONAUTHORKEY				0x32
+		uint16_t					0x0001
+		FT_COLLECTIONAUTHORKEY				0x32
 		uint32_t					blob size
 		(notype)					blob data
 
