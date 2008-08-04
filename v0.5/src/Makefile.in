@@ -31,7 +31,7 @@ POST_INSTALL = :
 NORMAL_UNINSTALL = :
 PRE_UNINSTALL = :
 POST_UNINSTALL = :
-bin_PROGRAMS = amule_emc$(EXEEXT)
+bin_PROGRAMS = amule-emc$(EXEEXT)
 subdir = src
 DIST_COMMON = $(noinst_HEADERS) $(srcdir)/Makefile.am \
 	$(srcdir)/Makefile.in
@@ -208,8 +208,8 @@ uninstall-binPROGRAMS:
 
 clean-binPROGRAMS:
 	-test -z "$(bin_PROGRAMS)" || rm -f $(bin_PROGRAMS)
-amule_emc$(EXEEXT): $(amule_emc_OBJECTS) $(amule_emc_DEPENDENCIES) 
-	@rm -f amule_emc$(EXEEXT)
+amule-emc$(EXEEXT): $(amule_emc_OBJECTS) $(amule_emc_DEPENDENCIES) 
+	@rm -f amule-emc$(EXEEXT)
 	$(CXXLINK) $(amule_emc_OBJECTS) $(amule_emc_LDADD) $(LIBS)
 
 mostlyclean-compile:

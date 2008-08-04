@@ -31,7 +31,7 @@ POST_INSTALL = :
 NORMAL_UNINSTALL = :
 PRE_UNINSTALL = :
 POST_UNINSTALL = :
-bin_PROGRAMS = amule_emc$(EXEEXT)
+bin_PROGRAMS = amule-emc$(EXEEXT)
 subdir = src
 DIST_COMMON = $(noinst_HEADERS) $(srcdir)/Makefile.am \
 	$(srcdir)/Makefile.in
@@ -61,11 +61,11 @@ HEADERS = $(noinst_HEADERS)
 ETAGS = etags
 CTAGS = ctags
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
-ACLOCAL = ${SHELL} /home/johkra/amule-emc/missing --run aclocal-1.10
-AMTAR = ${SHELL} /home/johkra/amule-emc/missing --run tar
-AUTOCONF = ${SHELL} /home/johkra/amule-emc/missing --run autoconf
-AUTOHEADER = ${SHELL} /home/johkra/amule-emc/missing --run autoheader
-AUTOMAKE = ${SHELL} /home/johkra/amule-emc/missing --run automake-1.10
+ACLOCAL = ${SHELL} /home/johkra/amule-emc/v0.5/missing --run aclocal-1.10
+AMTAR = ${SHELL} /home/johkra/amule-emc/v0.5/missing --run tar
+AUTOCONF = ${SHELL} /home/johkra/amule-emc/v0.5/missing --run autoconf
+AUTOHEADER = ${SHELL} /home/johkra/amule-emc/v0.5/missing --run autoheader
+AUTOMAKE = ${SHELL} /home/johkra/amule-emc/v0.5/missing --run automake-1.10
 AWK = gawk
 CC = gcc
 CCDEPMODE = depmode=gcc3
@@ -76,7 +76,7 @@ CXX = g++
 CXXDEPMODE = depmode=gcc3
 CXXFLAGS = -g -O2
 CYGPATH_W = echo
-DEFS = -DPACKAGE_NAME=\"amule-emc\" -DPACKAGE_TARNAME=\"amule-emc\" -DPACKAGE_VERSION=\"0.5\" -DPACKAGE_STRING=\"amule-emc\ 0.5\" -DPACKAGE_BUGREPORT=\"wuischke@amule.org\" -DPACKAGE=\"amule-emc\" -DVERSION=\"0.5\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE__BOOL=1 -DHAVE_STDBOOL_H=1
+DEFS = -DPACKAGE_NAME=\"amule-emc\" -DPACKAGE_TARNAME=\"amule-emc\" -DPACKAGE_VERSION=\"0.5.1\" -DPACKAGE_STRING=\"amule-emc\ 0.5.1\" -DPACKAGE_BUGREPORT=\"wuischke@amule.org\" -DPACKAGE=\"amule-emc\" -DVERSION=\"0.5.1\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_INTTYPES_H=1 -DHAVE__BOOL=1 -DHAVE_STDBOOL_H=1
 DEPDIR = .deps
 ECHO_C = 
 ECHO_N = -n
@@ -93,24 +93,24 @@ LDFLAGS =
 LIBOBJS = 
 LIBS = 
 LTLIBOBJS = 
-MAKEINFO = ${SHELL} /home/johkra/amule-emc/missing --run makeinfo
+MAKEINFO = ${SHELL} /home/johkra/amule-emc/v0.5/missing --run makeinfo
 MKDIR_P = /bin/mkdir -p
 OBJEXT = o
 PACKAGE = amule-emc
 PACKAGE_BUGREPORT = wuischke@amule.org
 PACKAGE_NAME = amule-emc
-PACKAGE_STRING = amule-emc 0.5
+PACKAGE_STRING = amule-emc 0.5.1
 PACKAGE_TARNAME = amule-emc
-PACKAGE_VERSION = 0.5
+PACKAGE_VERSION = 0.5.1
 PATH_SEPARATOR = :
 SET_MAKE = 
 SHELL = /bin/sh
 STRIP = 
-VERSION = 0.5
-abs_builddir = /home/johkra/amule-emc/src
-abs_srcdir = /home/johkra/amule-emc/src
-abs_top_builddir = /home/johkra/amule-emc
-abs_top_srcdir = /home/johkra/amule-emc
+VERSION = 0.5.1
+abs_builddir = /home/johkra/amule-emc/v0.5/src
+abs_srcdir = /home/johkra/amule-emc/v0.5/src
+abs_top_builddir = /home/johkra/amule-emc/v0.5
+abs_top_srcdir = /home/johkra/amule-emc/v0.5
 ac_ct_CC = gcc
 ac_ct_CXX = g++
 am__include = include
@@ -130,7 +130,7 @@ host_alias =
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = $(SHELL) /home/johkra/amule-emc/install-sh
+install_sh = $(SHELL) /home/johkra/amule-emc/v0.5/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
@@ -208,8 +208,8 @@ uninstall-binPROGRAMS:
 
 clean-binPROGRAMS:
 	-test -z "$(bin_PROGRAMS)" || rm -f $(bin_PROGRAMS)
-amule_emc$(EXEEXT): $(amule_emc_OBJECTS) $(amule_emc_DEPENDENCIES) 
-	@rm -f amule_emc$(EXEEXT)
+amule-emc$(EXEEXT): $(amule_emc_OBJECTS) $(amule_emc_DEPENDENCIES) 
+	@rm -f amule-emc$(EXEEXT)
 	$(CXXLINK) $(amule_emc_OBJECTS) $(amule_emc_LDADD) $(LIBS)
 
 mostlyclean-compile:

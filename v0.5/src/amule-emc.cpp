@@ -29,9 +29,12 @@ int main(int argc, char *argv[])
 	std::string help("-h");
 	std::string version("-v");
 	if( (1 == argc) || (0 == help.compare(argv[1]))) {
-		std::cout << "amule-emc - list links inside an emulecollection file" << std::endl;
+		std::cout << "amule-emc - list links inside emulecollection files" << std::endl;
 		std::cout << std::endl << "Usage Information:" << std::endl;
-		std::cout << "amule_emc [-h] [-v] [file.emulecollection]..." << std::endl;
+		std::cout << "amule-emc [-h] [-v] [files.emulecollection]..." << std::endl;
+		std::cout << std::endl << "Options:" << std::endl;
+		std::cout << "  -h        display this help screen and exit" << std::endl;
+		std::cout << "  -v        output version information and exit" << std::endl;
 		return 0;
 	}
 
