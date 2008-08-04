@@ -27,5 +27,6 @@ AC_TYPE_UINT32_T
 AC_TYPE_UINT64_T
 
 AC_CONFIG_FILES([Makefile
-                 src/Makefile])
+                 src/Makefile
+		 man/Makefile])
 AC_OUTPUT
