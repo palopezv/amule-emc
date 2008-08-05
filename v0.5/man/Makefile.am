@@ -1,1 +1,3 @@
-amule_emc_MANS = amule-emc.1
+man_MANS = amule-emc.1
+
+EXTRA_DIST = amule-emc.1

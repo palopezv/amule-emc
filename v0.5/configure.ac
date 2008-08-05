@@ -2,7 +2,7 @@
 # Process this file with autoconf to produce a configure script.
 
 AC_PREREQ(2.62)
-AC_INIT(amule-emc, 0.5.1, wuischke@amule.org)
+AC_INIT(amule-emc, 0.5.2, wuischke@amule.org)
 AM_INIT_AUTOMAKE
 AC_CONFIG_SRCDIR(src/amule-emc.cpp)
 
